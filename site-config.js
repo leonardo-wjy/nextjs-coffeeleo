@@ -1,11 +1,11 @@
 const siteConfig = {
-  title: "Rishit's Default Next.js Starter",
+  title: "Coffee Leo",
   tagline:
-    'This is a starter template for Next.js projects with Tailwind CSS, SEO, and more.',
-  url: 'https://nextjs-starter.rishit.dev',
+    'This is a Next.js projects with Tailwind CSS, SEO, and more.',
+  url: 'https://leonardo-wjy.000webhostapp.com',
   baseUrl: '/',
-  projectName: 'rp-nextjs-starter',
-  organizationName: 'rishitpatel.com',
+  projectName: 'coffee-leo',
+  organizationName: 'leonardo-wjy.000webhostapp.com',
 };
 
 module.exports = siteConfig;
