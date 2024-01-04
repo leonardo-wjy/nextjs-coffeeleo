@@ -3,8 +3,9 @@ import '../styles/main.scss';
 import { Container } from '../components/ui/containers';
 import { useState, useEffect } from 'react';
 import Splash from '../components/layout/splash';
+import siteConfig from '../../site-config';
 
-const about = () => {
+const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,11 +28,7 @@ const about = () => {
         <Layout>
           <Container className='flex justify-center items-center text-center h-[85vh]'>
             <div className="container mx-auto mt-8">
-              <h2 className="text-3xl font-bold mb-4 text-white">About Coffee Leo</h2>
-              <p className='text-white'>
-                Coffee Leo is your go-to destination for everything related to coffee.
-                Learn about different coffee varieties, brewing methods, and explore the rich world of coffee culture.
-              </p>
+                <h1 className="text-4xl font-bold text-white">Welcome to Coffee Leo</h1>
             </div>
           </Container>
         </Layout>
@@ -40,4 +37,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default Home;
