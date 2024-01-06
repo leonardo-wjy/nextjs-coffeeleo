@@ -1,3 +1,0 @@
-MIT License
-
-Copyright (c) 2023 Leonardo Wijaya

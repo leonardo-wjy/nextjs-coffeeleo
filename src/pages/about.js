@@ -1,43 +1,25 @@
-import Layout from '../components/layout';
-import '../styles/main.scss';
-import { Container } from '../components/ui/containers';
-import { useState, useEffect } from 'react';
-import Splash from '../components/layout/splash';
+import React from 'react';
+import Layout from '../components/Layout';
+import { Container } from '../ui/containers';
 
-const about = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate a loading delay with setTimeout
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 1000); // Adjust the timeout duration as needed (in milliseconds)
-
-    // Clear the timeout to avoid memory leaks when the component unmounts
-    return () => clearTimeout(timeout);
-  }, []); // Empty dependency array ensures the effect runs only once on mount
-
+const About = () => {
   return (
-    <div>
-      {loading ? (
-        // Display the splash screen while loading is true
-        <Splash />
-      ) : (
-        // Render your actual content when loading is false
-        <Layout>
-          <Container className='flex justify-center items-center text-center h-[85vh]'>
-            <div className="container mx-auto mt-8">
-              <h2 className="text-3xl font-bold mb-4 text-white">About Coffee Leo</h2>
-              <p className='text-white'>
-                Coffee Leo is your go-to destination for everything related to coffee.
-                Learn about different coffee varieties, brewing methods, and explore the rich world of coffee culture.
-              </p>
-            </div>
-          </Container>
-        </Layout>
-      )}
-    </div>
+    <Layout pageTitle="About Page">
+      {/* Your About page content */}
+      <Container className='flex justify-center items-center text-center h-[85vh]'>
+        <div className="container mx-auto mt-8">
+          <h2 className="text-3xl font-bold mb-4 text-blue-400">About</h2>
+          <p className='text-blue-400'>
+            Coffee Leo is not just a coffee shop; it's a community of coffee lovers brought together by their passion for exquisite coffee. Our journey began with a simple idea - to create a space where people could connect, relax, and savor the finest coffee blends.
+
+            At Coffee Leo, we source our coffee beans from the best regions, ensuring a rich and diverse flavor experience. Our skilled baristas are dedicated to the art of coffee-making, crafting each cup with precision and care. From the moment you step into our coffee haven, you'll feel the warmth of our community and the aroma of freshly brewed coffee.
+
+            Join us in celebrating the love for coffee. Whether you're a connoisseur or a curious beginner, there's a place for you at Coffee Leo.
+          </p>
+        </div>
+      </Container>
+    </Layout>
   );
 };
 
-export default about;
+export default About;
